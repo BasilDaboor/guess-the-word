@@ -1,0 +1,159 @@
+*{
+    box-sizing: border-box;
+
+}
+
+
+:root{
+    --primary-color: rgb(255, 187, 0);
+}
+body{
+    margin: 0;
+    background-color: #eee;
+    font-family: cursive;
+    /* padding-bottom: 60px; */
+}
+h1{
+    text-align: center;
+    padding: 20px;
+    margin: 0 0 50px;
+    background-color: white;
+    }
+.guess-game{
+    text-align: center;
+    width: 1000px;
+    margin: 20px auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    /* margin-bottom: 60px; */
+    .game-area{
+
+        .inputs{
+            > div{
+                    margin-bottom: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    span {
+                        margin: 15px;
+                    }
+            }
+            .disabled-inputs{
+                opacity: 0.5;
+                pointer-events: none;
+            }
+            input{
+                margin: 0 5px  ;
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                border-radius: 5px;
+                font-size: 30px;
+                caret-color: var(--primary-color);
+                background-color: white;
+                border: none;
+                border-bottom: 3px solid #333;
+                &.in-place{
+                    background-color: springgreen;
+                    border:springgreen ;
+                    color: white;
+                }
+                &.not-in-place{
+                    background-color: blueviolet;
+                    border: blueviolet;
+                    color: white;
+                }
+                &.wrong{
+                    background-color: red;
+                    border: red ;
+                    color: white;
+
+                }
+            }
+        }
+        .control {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 400px;
+            margin: 30px auto;
+            gap: 10px;
+            .check {
+            background-color: var(--primary-color);
+            flex: 1;
+            }
+            .hint {
+            background-color: #009688;
+            width: fit-content;
+            }
+            button {
+            border: none;
+            font-size: 25px;
+            padding: 15px 20px;
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+            font-family: cursive;
+            }
+            button:disabled {
+            background-color: black;
+            opacity: 0.4;
+            cursor: no-drop;
+            }
+    }}
+    .key-colors{
+        .key-color{
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: white;
+            margin-bottom: 10px;
+            .key {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-right: 10px;
+                &.in-place{
+                    background-color: springgreen;
+                }
+                &.not-in-place{
+                    background-color: blueviolet;
+                }
+                &.wrong{
+                    background-color: red;
+                }
+            }
+            
+        }
+
+    }
+
+}
+
+.message {
+    text-align: center;
+    font-size: 25px;
+    span {
+    /* display: block; */
+    font-size: 25px;
+    color: var(--primary-color);
+    text-transform: capitalize;
+    margin-top: 10px;
+    }
+    p {
+    margin-top: 15px;
+    }
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+}
+ 
